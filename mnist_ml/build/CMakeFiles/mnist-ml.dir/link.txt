@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/mnist-ml.dir/src/data.cpp.o CMakeFiles/mnist-ml.dir/src/data_handler.cpp.o  -o mnist-ml-1.0.0 

@@ -45,5 +45,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "bit": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/mnist_ml"
 }

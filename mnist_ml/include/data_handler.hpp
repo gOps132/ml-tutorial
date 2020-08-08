@@ -1,5 +1,4 @@
-#ifndef C09084D4_3835_4986_A557_28FC5C8CBB6E
-#define C09084D4_3835_4986_A557_28FC5C8CBB6E
+#pragma once
 
 #include <fstream>
 #include <string>
@@ -45,5 +44,3 @@ public:
     std::vector<data*> *get_test_data();
     std::vector<data*> *get_validation_data();
 };
-
-#endif /* C09084D4_3835_4986_A557_28FC5C8CBB6E */

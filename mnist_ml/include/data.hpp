@@ -1,5 +1,4 @@
-#ifndef D1151F61_C407_4BA8_95DB_38EDA96CFC15
-#define D1151F61_C407_4BA8_95DB_38EDA96CFC15
+#pragma once
 
 #include <vector>
 #include "stdint.h"
@@ -14,11 +13,11 @@ private:
     uint8_t label;
     int enum_label;
 public:
-    data(std::vector<uint8_t> *fv);
+    data();
     ~data();
 
     void set_feature_vector(std::vector<uint8_t>*);
-    void append_to_feature(uint8_t);
+    void append_to_feature_vector(uint8_t val);
     void set_label(uint8_t);
     void set_enumerated_label(int);
 
@@ -28,5 +27,3 @@ public:
     
     std::vector<uint8_t> *get_feature_vector();
 };
-
-#endif /* D1151F61_C407_4BA8_95DB_38EDA96CFC15 */

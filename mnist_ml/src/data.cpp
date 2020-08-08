@@ -7,14 +7,14 @@
     int enum_label;
 */
 
-data::data(std::vector<uint8_t> *fv)
-    : feature_vector(fv)
+data::data()
 {
+    feature_vector = new std::vector<uint8_t>;
 }
 
 data::~data()
 {
-    delete feature_vector;
+    // delete feature_vector;
 }
 
 void data::set_feature_vector(std::vector<uint8_t> *vect)
@@ -22,7 +22,7 @@ void data::set_feature_vector(std::vector<uint8_t> *vect)
     feature_vector = vect;
 }
 
-void data::append_to_feature(uint8_t val)
+void data::append_to_feature_vector(uint8_t val)
 {
     feature_vector->push_back(val);
 }

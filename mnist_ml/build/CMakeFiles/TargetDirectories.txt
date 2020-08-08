@@ -1,3 +1,0 @@
-/home/gian/dev/ml/ml-tutorial/mnist_ml/build/CMakeFiles/rebuild_cache.dir
-/home/gian/dev/ml/ml-tutorial/mnist_ml/build/CMakeFiles/edit_cache.dir
-/home/gian/dev/ml/ml-tutorial/mnist_ml/build/CMakeFiles/mnist-ml.dir
