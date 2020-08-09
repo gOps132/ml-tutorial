@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(mnist-ml
+project(mnist_ml
     VERSION 1.0.0
     DESCRIPTION "mnist-ml library"
     LANGUAGES CXX

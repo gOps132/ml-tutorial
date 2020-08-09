@@ -12,6 +12,9 @@ private:
     std::vector<uint8_t>* feature_vector;
     uint8_t label;
     int enum_label;
+
+    /* knn */
+    double distance;
 public:
     data();
     ~data();
@@ -26,4 +29,7 @@ public:
     uint8_t get_enumerated_label();
     
     std::vector<uint8_t> *get_feature_vector();
+
+    /*knn*/
+    void set_distance(double val);
 };

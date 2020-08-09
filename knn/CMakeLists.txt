@@ -7,8 +7,6 @@ project(knn
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(../mnist_ml)
-
 set(KNN_SOURCES
     src/knn.cpp
 )
@@ -18,7 +16,8 @@ option(KNN_BUILD_EXAMPLE OFF)
 if(KNN_BUILD_EXAMPLE)
     add_executable(${PROJECT_NAME} ${KNN_SOURCES})
 else()
-    add_library(${PROJECT_NAME} ${KNN_SOURCES})
+    # visibility options here
+    add_library(${PROJECT_NAME} SHARED ${KNN_SOURCES})
 endif()
 
 target_include_directories(${PROJECT_NAME}

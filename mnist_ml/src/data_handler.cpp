@@ -31,7 +31,7 @@ void data_handler::read_feature_vector(std::string path)
             }
         }
         printf("done getting file header \n");
-        int image_size = header[2]*header[3];
+        int image_size = header[2] * header[3];
         for (int i = 0; i < header[1]; i++)
         {
             data *d = new data();
@@ -42,7 +42,7 @@ void data_handler::read_feature_vector(std::string path)
                 {
                     d->append_to_feature_vector(element[0]);
                 }
-                else  
+                else
                 {
                     printf("Read Feature Vector Error Reading from file. \n");
                     exit(1);
@@ -109,20 +109,20 @@ void data_handler::split_data()
     while (count < train_size)
     {
         int rand_index = rand() % data_array->size(); // 0 & data->array->size() - 1
-        if(used_indexes.find(rand_index) == used_indexes.end())
+        if (used_indexes.find(rand_index) == used_indexes.end())
         {
             training_data->push_back(data_array->at(rand_index));
             used_indexes.insert(rand_index);
             count++;
         }
     }
-    
+
     /* Test Data */
     count = 0;
     while (count < test_size)
     {
         int rand_index = rand() % data_array->size(); // 0 & data->array->size() - 1
-        if(used_indexes.find(rand_index) == used_indexes.end())
+        if (used_indexes.find(rand_index) == used_indexes.end())
         {
             test_data->push_back(data_array->at(rand_index));
             used_indexes.insert(rand_index);
@@ -135,7 +135,7 @@ void data_handler::split_data()
     while (count < valid_size)
     {
         int rand_index = rand() % data_array->size(); // 0 & data->array->size() - 1
-        if(used_indexes.find(rand_index) == used_indexes.end())
+        if (used_indexes.find(rand_index) == used_indexes.end())
         {
             validation_data->push_back(data_array->at(rand_index));
             used_indexes.insert(rand_index);
@@ -151,10 +151,10 @@ void data_handler::split_data()
 void data_handler::count_classes()
 {
     int count = 0;
-    for(unsigned int i = 0; i < data_array->size(); i++)
+    for (unsigned int i = 0; i < data_array->size(); i++)
     {
         /* if true then the label is not in the map */
-        if(class_map.find(data_array->at(i)->get_label()) == class_map.end())
+        if (class_map.find(data_array->at(i)->get_label()) == class_map.end())
         {
             class_map[data_array->at(i)->get_label()] = count;
             data_array->at(i)->set_enumerated_label(count);
@@ -167,10 +167,10 @@ void data_handler::count_classes()
 
 uint32_t data_handler::convert_little_endian(const unsigned char *bytes)
 {
-  return (uint32_t)((bytes[0] << 24) |
-                    (bytes[1] << 16)  |
-                    (bytes[2] << 8)   |
-                    (bytes[3]));
+    return (uint32_t)((bytes[0] << 24) |
+                      (bytes[1] << 16) |
+                      (bytes[2] << 8) |
+                      (bytes[3]));
 }
 
 std::vector<data *> *data_handler::get_training_data()
@@ -187,14 +187,3 @@ std::vector<data *> *data_handler::get_validation_data()
 {
     return validation_data;
 }
-
-/* Example main 
-int main()
-{
-    data_handler *dh = new data_handler();
-    dh->read_feature_vector("/home/gian/dev/ml/ml-tutorial/assets/train-images-idx3-ubyte");
-    dh->read_feature_labels("/home/gian/dev/ml/ml-tutorial/assets/train-labels-idx1-ubyte");
-    dh->split_data();
-    dh->count_classes();
-}
-*/

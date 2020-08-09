@@ -1,0 +1,19 @@
+[
+{
+  "directory": "/home/gian/dev/ml/ml-tutorial/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -Dmnist_ml_EXPORTS -I../mnist_ml/include  -g -fPIC   -std=gnu++17 -o mnist_ml/CMakeFiles/mnist_ml.dir/src/data.cpp.o -c /home/gian/dev/ml/ml-tutorial/mnist_ml/src/data.cpp",
+  "file": "/home/gian/dev/ml/ml-tutorial/mnist_ml/src/data.cpp"
+},
+
+{
+  "directory": "/home/gian/dev/ml/ml-tutorial/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -Dmnist_ml_EXPORTS -I../mnist_ml/include  -g -fPIC   -std=gnu++17 -o mnist_ml/CMakeFiles/mnist_ml.dir/src/data_handler.cpp.o -c /home/gian/dev/ml/ml-tutorial/mnist_ml/src/data_handler.cpp",
+  "file": "/home/gian/dev/ml/ml-tutorial/mnist_ml/src/data_handler.cpp"
+},
+
+{
+  "directory": "/home/gian/dev/ml/ml-tutorial/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I../knn/include -I../mnist_ml/include  -g   -std=gnu++17 -o knn/CMakeFiles/knn.dir/src/knn.cpp.o -c /home/gian/dev/ml/ml-tutorial/knn/src/knn.cpp",
+  "file": "/home/gian/dev/ml/ml-tutorial/knn/src/knn.cpp"
+}
+]

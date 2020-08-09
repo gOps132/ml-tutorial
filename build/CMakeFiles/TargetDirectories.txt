@@ -1,0 +1,8 @@
+/home/gian/dev/ml/ml-tutorial/build/CMakeFiles/rebuild_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/CMakeFiles/edit_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/mnist_ml/CMakeFiles/rebuild_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/mnist_ml/CMakeFiles/edit_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/mnist_ml/CMakeFiles/mnist_ml.dir
+/home/gian/dev/ml/ml-tutorial/build/knn/CMakeFiles/rebuild_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/knn/CMakeFiles/edit_cache.dir
+/home/gian/dev/ml/ml-tutorial/build/knn/CMakeFiles/knn.dir
