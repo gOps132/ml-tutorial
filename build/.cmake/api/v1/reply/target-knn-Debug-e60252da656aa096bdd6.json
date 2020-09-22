@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "mnist_ml/libmnist_ml.so"
+			"path" : "/home/gian/dev/ml/ml-tutorial/bin/knn"
 		}
 	],
 	"backtrace" : 1,
@@ -10,12 +10,13 @@
 	{
 		"commands" : 
 		[
-			"add_library",
+			"add_executable",
+			"target_link_libraries",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"mnist_ml/CMakeLists.txt"
+			"knn/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -25,13 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 36,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 34,
 				"parent" : 0
 			}
 		]
@@ -42,20 +49,18 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fPIC  "
+					"fragment" : "-g  "
 				},
 				{
 					"fragment" : "-std=gnu++17"
 				}
 			],
-			"defines" : 
-			[
-				{
-					"define" : "mnist_ml_EXPORTS"
-				}
-			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/gian/dev/ml/ml-tutorial/knn/include"
+				},
 				{
 					"backtrace" : 2,
 					"path" : "/home/gian/dev/ml/ml-tutorial/mnist_ml/include"
@@ -64,29 +69,51 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "mnist_ml::@14729dfb8a7e7d2b5fb3",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "mnist_ml::@14729dfb8a7e7d2b5fb3"
+		}
+	],
+	"id" : "knn::@b7de40f0fc58ee136499",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/gian/dev/ml/ml-tutorial/bin",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../bin/libmnist_ml.so.1.0.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lstdc++",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "mnist_ml",
-	"nameOnDisk" : "libmnist_ml.so",
+	"name" : "knn",
+	"nameOnDisk" : "knn",
 	"paths" : 
 	{
-		"build" : "mnist_ml",
-		"source" : "mnist_ml"
+		"build" : "knn",
+		"source" : "knn"
 	},
 	"sourceGroups" : 
 	[
@@ -94,8 +121,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -104,15 +130,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "mnist_ml/src/data.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "mnist_ml/src/data_handler.cpp",
+			"path" : "knn/src/knn.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "SHARED_LIBRARY"
+	"type" : "EXECUTABLE"
 }

@@ -1,0 +1,3 @@
+# ninja log v5
+0	743	1597029826454954039	mnist_ml/CMakeFiles/mnist_ml.dir/src/data.cpp.o	210e25673be03a98
+0	2031	1597029827742975265	mnist_ml/CMakeFiles/mnist_ml.dir/src/data_handler.cpp.o	2d99bd018b3418af

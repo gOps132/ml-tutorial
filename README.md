@@ -1,8 +1,11 @@
-Learning ML with c++ stl
+# Learning ML with c++ stl
 
-No official directory structure and I don't want any libs outside of this
-directory
+## CODE BY GERALD TAYLOR
 
-episodes done:
+just copied and modified a bit by me.
+
 [\] Extracting, transforming and Loading training data
-[\] Knearest Algorithhm
+
+[\] Knearest Neighbors Algorithm
+
+[ ] KMeans  Algorithms

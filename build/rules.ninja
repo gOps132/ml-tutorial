@@ -66,6 +66,14 @@ rule CXX_EXECUTABLE_LINKER__knn
 
 
 #############################################
+# Rule for creating executable symlink.
+
+rule CMAKE_SYMLINK_EXECUTABLE
+  command = /usr/bin/cmake -E cmake_symlink_executable $in $out && $POST_BUILD
+  description = Creating executable symlink $out
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE

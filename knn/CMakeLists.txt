@@ -12,18 +12,31 @@ set(KNN_SOURCES
 )
 
 option(KNN_BUILD_EXAMPLE OFF)
-
 if(KNN_BUILD_EXAMPLE)
     add_executable(${PROJECT_NAME} ${KNN_SOURCES})
 else()
-    # visibility options here
-    add_library(${PROJECT_NAME} SHARED ${KNN_SOURCES})
+    add_library(${PROJECT_NAME} STATIC ${KNN_SOURCES})
 endif()
 
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    VERSION     ${PROJECT_VERSION}
+    SONAME      ${PROJECT_VERSION_MAJOR}
+
+    # THESE ARE OPTIONAL 
+    RUNTIME_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
+    ARCHIVE_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
+    LIBRARY_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
+)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    DEFINITIONS     -DEUCLID
+)
+
 target_include_directories(${PROJECT_NAME}
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+    PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE mnist_ml
+    PRIVATE     mnist_ml
+    PRIVATE     -lstdc++
 )

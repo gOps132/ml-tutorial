@@ -12,16 +12,6 @@ knn::knn(int val)
 {
 }
 
-knn::knn()
-{
-    /* nothing */
-}
-
-knn::~knn()
-{
-    /* nothing */
-}
-
 // 0(N)^2 if K ~ N
 // if K = 2 then 0(~N )
 
@@ -94,7 +84,7 @@ int knn::predict()
     {
         if(class_freq.find(m_neighbors->at(i)->get_label()) == class_freq.end())
         {
-            class_freq
+            class_freq[neighbors];
         }
     }
 }

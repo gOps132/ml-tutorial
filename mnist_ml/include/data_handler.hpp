@@ -26,6 +26,7 @@ private:
     const double TRAIN_SET_PERCENT = 0.75;
     const double TEST_SET_PERCENT = 0.20;
     const double VALIDATION_PERCENT = 0.05;
+    
 public:
     data_handler();
     ~data_handler();

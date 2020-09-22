@@ -14,7 +14,6 @@ set(MNIST_ML_SOURCES
 
 # don't use build example when using as libs
 option(MNIST_ML_BUILD_EXAMPLE OFF)
-
 if(MNIST_ML_BUILD_EXAMPLE)
     set(MNIST_ML_SOURCES
         src/data.cpp
@@ -27,10 +26,13 @@ else()
 endif()
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}"
-
     VERSION     ${PROJECT_VERSION}
     SONAME      ${PROJECT_VERSION_MAJOR}
+
+    # THESE ARE OPTIONAL 
+    RUNTIME_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
+    ARCHIVE_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
+    LIBRARY_OUTPUT_DIRECTORY    "${CMAKE_SOURCE_DIR}/bin"
 )
 
 target_include_directories(${PROJECT_NAME}
